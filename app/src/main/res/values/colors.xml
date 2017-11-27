@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="red">#FF0000</color>
+
+    <!-- 主页背景颜色 -->
+    <color name="main_bg">#f0f0f0</color>
+
+    <!-- 公共的item的分割线 —— 由姚宇编辑于2017/9/22 -->
+    <color name="compoentItemDivision_Line">#cccccc</color>
+    <!-- 公共的字体颜色——黑色 —— 由姚宇编辑于2017/10/25 -->
+    <color name="commonFontColor_black">#333333</color>
+    <!-- 公共的字体颜色——灰色 —— 由姚宇编辑于2017/10/25 -->
+    <color name="commonFontColor_gray">#999999</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="guide_bg">#4D000000</color>
+
+    <!-- 喜欢的商品item —— 由姚宇编辑于2017/9/22 -->
+    <!--&lt;!&ndash; 喜欢的商品item——标题 —— 由姚宇编辑于2017/9/22 &ndash;&gt;-->
+    <!--<color name="tv_itemLikeGoods_goodsName">#333333</color>-->
+    <!-- 喜欢的商品item——折扣价 —— 由姚宇编辑于2017/9/22 -->
+    <color name="tv_itemLikeGoods_discountPrice">#fe756d</color>
+    <!--&lt;!&ndash; 喜欢的商品item——原价 —— 由姚宇编辑于2017/9/22 &ndash;&gt;-->
+    <!--<color name="tv_itemLikeGoods_originalPrice">#999999</color>-->
+    <!-- 喜欢的商品item——背景色 —— 由姚宇编辑于2017/9/22 -->
+    <color name="itemLikeGoods_background">#ebebeb</color>
+    <!--&lt;!&ndash; 喜欢的商品 —— 由姚宇编辑于2017/9/22 &ndash;&gt;-->
+    <!--<color name="viewLikeGoods_titleBackground">#333333</color>-->
+
+    <!-- 用户信息页 —— 由姚宇编辑于2017/9/27 -->
+    <!-- 用户信息页——背景色 —— 由姚宇编辑于2017/9/27 -->
+    <color name="viewUserInfo_background">#e4e4e4</color>
+    <!--&lt;!&ndash; 用户信息页——用户昵称 —— 由姚宇编辑于2017/9/27 &ndash;&gt;-->
+    <!--<color name="tv_viewUserInfo_userName">#333333</color>-->
+    <!--&lt;!&ndash; 用户信息页——编辑提示 —— 由姚宇编辑于2017/9/27 &ndash;&gt;-->
+    <!--<color name="tv_viewUserInfo_editUser">#999999</color>-->
+    <color name="switch_track_on">#F97C76</color>
+    <color name="switch_track_off">#DDDDDD</color>
+    <!-- 密码页获取验证码字体颜色 —— 由姚宇编辑于2017/10/27 -->
+    <color name="activity_password_getCode">#fe756d</color>
+    <!-- 密码页获取验证码字体颜色 —— 由姚宇编辑于2017/10/27 -->
+    <color name="activity_password_hint">#c4c4c4</color>
+</resources>

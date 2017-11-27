@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar_main"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:background="?attr/colorPrimary"
+    android:title="@null"
+    app:contentInsetLeft="0dp"
+    app:contentInsetStart="0dp">
+    <!--android:minHeight="?attr/actionBarSize"-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/toolbar_left"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            tools:src="@drawable/nav_menu" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#333333"
+                android:textSize="17sp"
+                tools:text="猜你喜欢" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="48dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/toolbar_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="5dp"
+                tools:src="@drawable/nav_like" />
+
+            <ImageView
+                android:id="@+id/toolbar_right_anim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="5dp"
+                android:src="@drawable/nav_like_s"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/toolbar_red_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/toolbar_right"
+                android:layout_alignTop="@+id/toolbar_right"
+                android:src="@drawable/red_point"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.v7.widget.Toolbar>

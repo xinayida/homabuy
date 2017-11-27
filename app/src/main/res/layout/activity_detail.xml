@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/white"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/detail_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_layout"
+        android:layout_below="@+id/toolbar_detail">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/main_bg"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/detail_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:textColor="#f97e76"
+                android:textSize="18sp"
+                tools:text="$3644" />
+
+            <TextView
+                android:id="@+id/detail_price_sec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:textColor="#999"
+                android:textSize="13sp"
+                tools:text="$3999" />
+
+            <TextView
+                android:id="@+id/detail_praise_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="2dp"
+                android:textColor="#333333"
+                android:textSize="12sp"
+                tools:text="98%好评" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/detail_buy"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/orange_gradient"
+            android:gravity="center"
+            android:text="去购买"
+
+            android:textColor="#fff"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/network_error_detail"
+        layout="@layout/network_error" />
+
+    <include
+        android:id="@+id/toolbar_detail"
+        layout="@layout/toolbar_detail" />
+</RelativeLayout>

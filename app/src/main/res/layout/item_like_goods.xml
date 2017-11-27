@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:contentView="@+id/content"
+    app:rightMenuView="@+id/delete">
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignBottom="@+id/iv_itemLikeGoods_itemLayout"-->
+    <!--android:layout_alignTop="@+id/iv_itemLikeGoods_itemLayout"-->
+    <!--android:background="@drawable/orange_gradient"/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/iv_itemLikeGoods_del"-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignBottom="@+id/iv_itemLikeGoods_itemLayout"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_alignTop="@+id/iv_itemLikeGoods_itemLayout"-->
+    <!--android:background="@drawable/orange_gradient"-->
+    <!--android:gravity="center"-->
+    <!--android:text="@string/iv_itemLikeGoods_del"-->
+    <!--android:textColor="@android:color/white"-->
+    <!--android:textSize="17sp"/>-->
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:background="@color/itemLikeGoods_background"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_itemLikeGoods_picture"
+            android:layout_width="82dp"
+            android:layout_height="82dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="18dp"
+            android:src="@drawable/default_icon" />
+
+        <LinearLayout
+            android:id="@+id/win_layout"
+            android:layout_width="82dp"
+            android:layout_height="24dp"
+            android:layout_alignBottom="@+id/iv_itemLikeGoods_picture"
+            android:layout_alignLeft="@+id/iv_itemLikeGoods_picture"
+            android:background="#99fe756d"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/list_like_s" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/wish_success"
+                android:textColor="@color/common_color_white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_itemLikeGoods_goodsName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="13dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="18dp"
+            android:layout_toEndOf="@+id/iv_itemLikeGoods_picture"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/commonFontColor_black"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tv_itemLikeGoods_goodsName"
+            android:layout_below="@+id/tv_itemLikeGoods_goodsName"
+            android:layout_marginTop="11dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_itemLikeGoods_discountPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/tv_itemLikeGoods_discountPrice"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_itemLikeGoods_originalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/commonFontColor_gray"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_itemLikeGoods_discountPrice"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignStart="@+id/tv_itemLikeGoods_goodsName"-->
+        <!--android:layout_below="@+id/tv_itemLikeGoods_goodsName"-->
+        <!--android:layout_marginBottom="22dp"-->
+        <!--android:layout_marginTop="13dp"-->
+        <!--android:text="@string/tv_itemLikeGoods_discountPrice"-->
+        <!--android:textColor="@color/tv_itemLikeGoods_discountPrice"-->
+        <!--android:textSize="18sp"/>-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_itemLikeGoods_originalPrice"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignBottom="@+id/tv_itemLikeGoods_discountPrice"-->
+        <!--android:layout_marginStart="12dp"-->
+        <!--android:layout_toEndOf="@+id/tv_itemLikeGoods_discountPrice"-->
+        <!--android:text="@string/tv_itemLikeGoods_originalPrice"-->
+        <!--android:textColor="@color/commonFontColor_gray"-->
+        <!--android:textSize="13sp"/>-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/iv_itemLikeGoods_picture"
+            android:background="@color/compoentItemDivision_Line" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/delete"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/orange_gradient"
+        android:gravity="center"
+        android:text="@string/iv_itemLikeGoods_del"
+        android:textColor="@android:color/white"
+        android:textSize="17sp" />
+</com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout>

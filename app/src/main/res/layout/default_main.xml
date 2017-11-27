@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:gravity="center_horizontal"
+    android:id="@+id/default_main_layout"
+    android:visibility="gone"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_marginTop="157dp"
+        android:src="@drawable/nomore_goods"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/nomore_goods"
+        android:textColor="#999999"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/report"
+        android:layout_marginTop="17dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FE756D"
+        android:textSize="18sp"
+        android:text="@string/report" />
+
+</LinearLayout>

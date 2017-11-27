@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 前面B3为透明度 —— 由姚宇编辑于2017/10/25 -->
+    <gradient
+        android:angle="270"
+        android:endColor="#B3f7ab6f"
+        android:startColor="#B3f97c76"/>
+
+    <corners android:radius="3dip"/>
+
+</shape>

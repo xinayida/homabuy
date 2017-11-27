@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="rectangle">
+    <size
+        android:width="15dp"
+        android:height="15dp">
+    </size>
+    <!-- 填充的颜色：这里设置滑动块为白色 -->
+    <solid android:color="@android:color/white"/>
+    <!-- 边框的颜色 ：因为需要显示一点点背景色，所以设置了一个透明边框 -->
+    <stroke
+        android:width="3dp"
+        android:color="@android:color/transparent"/>
+    <corners android:radius="25dip"/>
+</shape>

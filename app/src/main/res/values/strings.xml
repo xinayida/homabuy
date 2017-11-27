@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">河马速购</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="drawer_open">open</string>
+    <string name="drawer_close">close</string>
+
+    <!-- 喜欢的商品 —— 由姚宇编辑于2017/9/21 -->
+    <!-- 喜欢的商品页面标题名称 —— 由姚宇编辑于2017/9/21 -->
+    <string name="like_goods_title">心愿单</string>
+    <!-- 喜欢的商品页面item——删除 —— 由姚宇编辑于2017/9/27 -->
+    <string name="iv_itemLikeGoods_del">删除</string>
+
+    <!-- 用户信息页 —— 由姚宇编辑于2017/9/27 -->
+    <!-- 用户信息页——编辑提示 —— 由姚宇编辑于2017/9/27 -->
+    <string name="tv_viewUserInfo_editUser">点击查看/编辑</string>
+    <!-- 用户信息页——首页 —— 由姚宇编辑于2017/9/27 -->
+    <string name="tv_viewUserInfo_home">首页</string>
+    <!-- 用户信息页——设置 —— 由姚宇编辑于2017/9/27 -->
+    <string name="tv_viewUserInfo_setting">设置</string>
+    <!-- 用户信息页——彩蛋管理 —— 由姚宇编辑于2017/9/27 -->
+    <string name="tv_viewUserInfo_bonusScene">彩蛋管理</string>
+    <!-- 用户信息页——用户反馈 —— 由姚宇编辑于2017/9/27 -->
+    <string name="tv_viewUserInfo_feedback">用户反馈</string>
+    <!-- 用户信息页——关于 —— 由姚宇编辑于2017/9/27 -->
+    <string name="tv_viewUserInfo_about">关于</string>
+    <!-- 用户信息页——推荐给好友 —— 由姚宇编辑于2017/9/27 -->
+    <string name="tv_viewUserInfo_share">推荐给好友</string>
+
+    <!-- 设置页 —— 由姚宇编辑于2017/10.25 -->
+    <!-- 设置页——我的地址 —— 由姚宇编辑于2017/10.25 -->
+    <string name="tv_viewSetting_myAddress">我的地址</string>
+    <!-- 设置页——密码 —— 由姚宇编辑于2017/10.27 -->
+    <string name="tv_viewSetting_password">密码</string>
+    <!-- 设置页——推送通知 —— 由姚宇编辑于2017/10.25 -->
+    <string name="tv_viewSetting_push">推送通知</string>
+    <!-- 设置页——清除缓存 —— 由姚宇编辑于2017/10.25 -->
+    <string name="tv_viewSetting_clearCache">清除缓存</string>
+    <!-- 设置页——退出登录 —— 由姚宇编辑于2017/10.25 -->
+    <string name="tv_viewSetting_quitLogin">退出登录</string>
+
+    <!-- 我的地址——收货人 —— 由姚宇编辑于2017/10.27 -->
+    <string name="tv_activityMyAddress_recipient">收货人</string>
+    <!-- 我的地址——收货人 —— 由姚宇编辑于2017/10.27 -->
+    <string name="tv_activityMyAddress_phone">手机号码</string>
+    <!-- 我的地址——收货人 —— 由姚宇编辑于2017/10.27 -->
+    <string name="tv_activityMyAddress_address">详细地址</string>
+    <!-- 我的地址——收货人 —— 由姚宇编辑于2017/10.27 -->
+    <string name="tv_activityMyAddress_save">保 存</string>
+
+    <!-- 设置密码——手机号码提示—— 由姚宇编辑于2017/10.27 -->
+    <string name="tv_activityPassword_getCode">获取验证码</string>
+    <!-- 设置密码——手机号码提示—— 由姚宇编辑于2017/10.27 -->
+    <string name="tv_activityPassword_phone_hint">请输入手机号码</string>
+    <!-- 设置密码——手机验证码提示—— 由姚宇编辑于2017/10.27 -->
+    <string name="tv_activityPassword_code_hint">请输入验证码</string>
+    <!-- 设置密码——密码提示—— 由姚宇编辑于2017/10.27 -->
+    <string name="tv_activityPassword_password_hint">请输入密码（最少8位，数字+字母）</string>
+    <!-- 设置密码——提交—— 由姚宇编辑于2017/10.27 -->
+    <string name="tv_activityPassword_submit">提交</string>
+    <string name="wish_congratulations">恭喜，心愿已达成</string>
+    <string name="wish_btn_detail">查看详情</string>
+    <string name="wish_btn_share">立即分享</string>
+    <string name="wish_success">心愿达成</string>
+    <string name="fill_contact_info">填写你的收货地址\n说不定哪天心愿单的商品就寄到你手上了呢！\n上划得越多，实现心愿单的概率越大哦！</string>
+    <string name="login_wechat">微信登录</string>
+    <string name="ok">确认</string>
+    <string name="cancel">取消</string>
+    <string name="update_version">版本更新</string>
+    <string name="clear_cache_success">清除成功</string>
+    <string name="share">分享</string>
+    <string name="default_like">报告小主，您连心愿都没，让河马怎么帮您达成呢？</string>
+    <string name="nomore_goods">没有更多商品</string>
+    <string name="report">报告河马</string>
+    <string name="share_to_friend_msg">一个能帮您免费实现心愿单的客户端！</string>
+    <string name="share_win_title">为河马速购疯狂打call，免费实现了我的一个心愿</string>
+    <string name="share_win_msg">河马速购已免费为您的好友基础心愿单中的一件商品，创建创建心愿单，一起实现心愿！</string>
+    <string name="share_detail_msg">加入心愿单，河马速购可能为你免费送上门哦</string>
+    <string name="network_error">网络异常，请刷新！</string>
+    <string name="network_error_simple">网络异常</string>
+    <string name="guide_text_2">上划 加入心愿单 下划 再见</string>
+
+</resources>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/main_bg"
+              android:orientation="vertical">
+
+    <include layout="@layout/toolbar_setting"/>
+
+    <RelativeLayout
+        android:id="@+id/ll_viewMyAddress_recipient"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="13dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/tv_activityMyAddress_recipient"
+            android:textColor="@color/commonFontColor_black"
+            android:textSize="15sp"/>
+
+        <EditText
+            android:id="@+id/et_viewMyAddress_recipient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="94dp"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical|start"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/commonFontColor_black"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+    <RelativeLayout
+        android:id="@+id/ll_viewMyAddress_phone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/tv_activityMyAddress_phone"
+            android:textColor="@color/commonFontColor_black"
+            android:textSize="15sp"/>
+
+        <EditText
+            android:id="@+id/et_viewMyAddress_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="94dp"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical|start"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:textColor="@color/commonFontColor_black"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+    <RelativeLayout
+        android:id="@+id/ll_viewMyAddress_address"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/tv_activityMyAddress_address"
+            android:textColor="@color/commonFontColor_black"
+            android:textSize="15sp"/>
+
+        <EditText
+            android:id="@+id/et_viewMyAddress_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="94dp"
+            android:background="@android:color/transparent"
+            android:gravity="top|start"
+            android:minLines="1"
+            android:textColor="@color/commonFontColor_black"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_viewSetting_save"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="320dp"
+        android:layout_height="44dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/btn_quit_login"
+        android:text="@string/tv_activityMyAddress_save"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"/>
+</LinearLayout>

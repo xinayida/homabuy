@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ezy.ui.view.BannerView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/guild_banner"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    app:bvIsLoop="false"
+    app:bvIndicatorColor="#cccccc"
+    app:bvIndicatorColorSelected="@color/common_color_white"
+    app:bvIsAuto="false" />

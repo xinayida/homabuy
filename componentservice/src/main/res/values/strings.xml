@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">componentservice</string>
+    <string name="network_error">网络异常，请刷新！</string>
+</resources>

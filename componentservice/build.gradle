@@ -1,0 +1,41 @@
+apply plugin: 'com.android.library'
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+    compileSdkVersion compileSdk_Version.toInteger()
+    buildToolsVersion "${buildTools_Version}"
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+def dagger_version = "2.11"
+
+dependencies {
+    compile project(':componentlib')
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //dagger - start
+    compile "com.google.dagger:dagger:${dagger_version}"
+    annotationProcessor "com.google.dagger:dagger-compiler:${dagger_version}"
+    //dagger - end
+    compile 'com.github.mcxtzhang:all-base-adapter:V1.8.0'
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'//微信
+}
