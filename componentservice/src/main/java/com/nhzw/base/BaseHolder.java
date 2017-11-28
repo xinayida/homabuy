@@ -47,7 +47,7 @@ public abstract class BaseHolder<T> extends RecyclerView.ViewHolder implements V
      * 释放资源
      */
     protected void onRelease() {
-
+        mOnViewClickListener = null;
     }
 
 }

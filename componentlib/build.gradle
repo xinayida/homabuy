@@ -41,7 +41,6 @@ dependencies {
 
     compile 'com.github.czy1121:bannerview:1.0.2'//https://github.com/czy1121/bannerview
     compile 'com.github.Othershe:NiceDialog:1.1.4'//NiceDialog
-    compile 'com.github.markomilos:paginate:0.5.1'//paginate
     compile "com.jakewharton:butterknife:${butterknifeSdkVersion}"
     compile "com.jakewharton:butterknife-compiler:${butterknifeSdkVersion}"
 

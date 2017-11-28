@@ -61,14 +61,16 @@ public abstract class BaseAdapter<T> extends RecyclerView.Adapter<BaseHolder<T>>
         } else {
             View view = LayoutInflater.from(parent.getContext()).inflate(getLayoutId(viewType), parent, false);
             holder = getHolder(view, viewType);
-            holder.setOnItemClickListener(new BaseHolder.OnViewClickListener() {//设置Item点击事件
-                @Override
-                public void onViewClick(View view, int position) {
-                    if (onItemClickListener != null) {
-                        onItemClickListener.onItemClick(view, viewType, infos.get(position), position);
+            if (onItemClickListener != null) {
+                holder.setOnItemClickListener(new BaseHolder.OnViewClickListener() {//设置Item点击事件
+                    @Override
+                    public void onViewClick(View view, int position) {
+                        if (onItemClickListener != null) {
+                            onItemClickListener.onItemClick(view, viewType, infos.get(position), position);
+                        }
                     }
-                }
-            });
+                });
+            }
         }
 
         return holder;
@@ -148,21 +150,14 @@ public abstract class BaseAdapter<T> extends RecyclerView.Adapter<BaseHolder<T>>
 
 
     /**
-     * 遍历所有hodler,释放他们需要释放的资源
-     *
-     * @param recyclerView
+     * 使用原生方法来释放holder的资源
+     * @param holder
      */
-    public static void releaseAllHolder(RecyclerView recyclerView) {
-        if (recyclerView == null) return;
-        for (int i = recyclerView.getChildCount() - 1; i >= 0; i--) {
-            final View view = recyclerView.getChildAt(i);
-            RecyclerView.ViewHolder viewHolder = recyclerView.getChildViewHolder(view);
-            if (viewHolder != null && viewHolder instanceof BaseHolder) {
-                ((BaseHolder) viewHolder).onRelease();
-            }
-        }
+    @Override
+    public void onViewRecycled(BaseHolder<T> holder) {
+//        Log.d("Stefan", "onViewRecycled " + holder.toString());
+        holder.onRelease();
     }
-
 
     public interface OnRecyclerViewItemClickListener<T> {
         void onItemClick(View view, int viewType, T data, int position);

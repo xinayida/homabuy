@@ -37,13 +37,13 @@ import com.nhzw.shopping.adapter.LikeAdapter;
 import com.nhzw.shopping.model.entity.GoodsInfo;
 import com.nhzw.shopping.viewmodel.MainViewModel;
 import com.nhzw.utils.ImageLoader;
+import com.nhzw.utils.ScrollUtils;
 import com.nhzw.utils.UMUtil;
 import com.nhzw.widget.stacklayout.StackLayout;
 import com.nhzw.widget.stacklayout.transformer.StackPageTransformer;
 import com.othershe.nicedialog.BaseNiceDialog;
 import com.othershe.nicedialog.NiceDialog;
 import com.othershe.nicedialog.ViewConvertListener;
-import com.paginate.Paginate;
 import com.xinayida.lib.annotation.AFInject;
 import com.xinayida.lib.utils.SpUtil;
 
@@ -121,7 +121,6 @@ public class MainActivity extends BaseActivity<MainViewModel> implements SwipeRe
 
     private SingleAdapter<GoodsInfo> adapter;
     private LikeAdapter likeAdapter;
-    private Paginate likePaginate;
     private boolean loadingMore;
 
 
@@ -321,33 +320,31 @@ public class MainActivity extends BaseActivity<MainViewModel> implements SwipeRe
                 }
             }
         });
-        if (likePaginate == null) {
-            Paginate.Callbacks callbacks = new Paginate.Callbacks() {
-                @Override
-                public void onLoadMore() {//TODO 会多次调用，需要在加载更多时屏蔽掉重复请求
-                    if (likeAdapter.getItemCount() > 0 && !viewModel.likeLoadAll) {
-//                        Log.d("Stefan", "loadMore " + likeAdapter.getItemCount() + "  " + viewModel.timeStamp);
-                        viewModel.loadLikeList(false);
-                    }
+        final ScrollUtils.Callbacks callbacks = new ScrollUtils.Callbacks() {
+            @Override
+            public void onLoadMore() {
+//                Log.d("Stefan", "loadMore " + likeAdapter.getItemCount() + "  " + viewModel.timeStamp);
+                if (likeAdapter.getItemCount() > 0 && !viewModel.likeLoadAll) {
+                    viewModel.loadLikeList(false);
                 }
+            }
 
-                @Override
-                public boolean isLoading() {
-                    return loadingMore;
-                }
+            @Override
+            public boolean isLoading() {
+                return loadingMore;
+            }
 
-                @Override
-                public boolean hasLoadedAllItems() {
-                    return viewModel.likeLoadAll;
-                }
-            };
-
-
-            likePaginate = Paginate.with(likeRecyclerView, callbacks)
-                    .setLoadingTriggerThreshold(1)
-                    .build();
-            likePaginate.setHasMoreDataToLoad(false);
-        }
+            @Override
+            public boolean hasLoadedAllItems() {
+                return viewModel.likeLoadAll;
+            }
+        };
+        likeRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                ScrollUtils.checkEndOffset(likeRecyclerView, callbacks);
+            }
+        });
     }
 
     private void showNotify(final GoodsInfo info) {
@@ -475,7 +472,6 @@ public class MainActivity extends BaseActivity<MainViewModel> implements SwipeRe
                     showWishError();
                 default:
                     loadingMore = false;
-                    likePaginate.setHasMoreDataToLoad(false);
                     RxUtils.runOnUIDelay(new Action() {
                         @Override
                         public void run() throws Exception {

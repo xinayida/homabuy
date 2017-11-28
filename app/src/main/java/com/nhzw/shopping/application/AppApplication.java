@@ -75,16 +75,16 @@ public class AppApplication extends MultiDexApplication {
         initUM();
 //        ServiceManager.getInstance().registerComponent("com.nhzw.shopping.login.applike.LoginAppLike");
 
-        if (BuildConfig.DEBUG) {
-            AppService.DEBUG = true;
-            AppService.DOMAIN_API = "http://192.168.16.2:7777/api/";
-            AppService.DOMAIN_LOGIN = "http://192.168.16.2:8888/";
-            AppService.DOMAIN_UPDATE = "http://192.168.16.2:7777/app/";
-        } else {
+//        if (BuildConfig.DEBUG) {
+//            AppService.DEBUG = true;
+//            AppService.DOMAIN_API = "http://192.168.16.2:7777/api/";
+//            AppService.DOMAIN_LOGIN = "http://192.168.16.2:8888/";
+//            AppService.DOMAIN_UPDATE = "http://192.168.16.2:7777/app/";
+//        } else {
             AppService.DOMAIN_API = "https://api.homabuy.com/api/";
             AppService.DOMAIN_UPDATE = "https://api.homabuy.com/app/";
             AppService.DOMAIN_LOGIN = " https://user.homabuy.com/";
-        }
+//        }
         Router.getInstance().registerRouter("login", LoginActivity.class);
         L.debug = false;
     }

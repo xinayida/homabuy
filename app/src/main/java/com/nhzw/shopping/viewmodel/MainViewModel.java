@@ -167,8 +167,8 @@ public class MainViewModel extends BaseViewModel<MainRepository> implements Stor
                 });
     }
 
-    public Long timeStamp;
-    public Long lastTimeStamp;
+     private Long timeStamp;
+     private Long lastTimeStamp;
 
     public void loadLikeList(final boolean refresh) {
         pullToRefreshLike = refresh;
